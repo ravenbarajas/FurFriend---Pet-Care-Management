@@ -1,0 +1,134 @@
+/* Layout Components */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--auto {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Header Layout */
+.header {
+  background: var(--bg-white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: var(--spacing-md) 0;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  background: var(--bg-light);
+}
+
+.sidebar {
+  background: var(--bg-white);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+}
+
+.main-content {
+  padding: var(--spacing-lg);
+}
+
+.main-header {
+  background: var(--bg-white);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: calc(-1 * var(--spacing-lg)) calc(-1 * var(--spacing-lg)) var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar--open {
+    left: 0;
+  }
+  
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .flex--wrap {
+    flex-direction: column;
+  }
+  
+  .grid--auto {
+    grid-template-columns: 1fr;
+  }
+}
