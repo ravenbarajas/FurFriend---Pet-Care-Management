@@ -1,0 +1,197 @@
+Absolutely. Here's the revised **Product Requirements Document (PRD)** for the **PetCarePro – Smart Pet Care Management System website frontend**, now specifically using **React + Vite + vanilla CSS only** (no Tailwind, no CSS frameworks).
+
+---
+
+# 📄 Product Requirements Document (PRD)
+
+**Product Name:** PetCarePro
+**Platform:** Web (Frontend Only – Mockup)
+**Tech Stack:** React + Vite + Vanilla CSS
+**Target Users:**
+
+* Veterinary Clinics
+* Pet Grooming Salons
+* Pet Boarding Services
+
+---
+
+## 🧠 Core Idea
+
+PetCarePro is a smart, streamlined web platform to manage pet profiles, service appointments, and client communication, helping pet care businesses improve efficiency and customer satisfaction.
+
+---
+
+## 🌐 Website Structure
+
+### Public-Facing
+
+```
+Landing Page
+│
+├── Features Overview
+│   ├── Centralized Pet Profiles
+│   ├── Appointment Booking
+│   ├── Treatment Tracking
+│   ├── Billing & Payments
+│   └── Client Portal
+│
+├── About
+├── Pricing
+├── Contact
+└── Login / Sign Up
+```
+
+### Authenticated (Post-login)
+
+```
+Dashboard
+│
+├── Pet Profiles
+│   └── Pet Detail View
+│
+├── Appointments
+│   ├── Calendar View
+│   └── New/Edit Booking
+│
+├── Treatments
+│   ├── Vaccination Alerts
+│   └── Past Treatments
+│
+├── Billing
+│   ├── Invoice History
+│   └── Payments
+│
+└── Messages & Documents
+    ├── Chat
+    └── File Sharing
+```
+
+---
+
+## 🎯 Functional Requirements (Frontend Mockup Only)
+
+### 1. **Landing Page**
+
+* **Hero Section**: Brand message, illustration, CTA buttons.
+* **Feature Highlights**: Visual section with icons and titles for each feature.
+* **Pricing Summary**: Table of plans with pricing tiers.
+* **Testimonials**: Static client quotes.
+* **Footer**: Links (About, Terms, Contact), social media icons.
+
+### 2. **Features Overview Pages**
+
+* Responsive layout using CSS Grid/Flexbox.
+* Section per core feature:
+
+  * **Pet Profiles**: Cards with image, name, and summary.
+  * **Appointments**: Calendar UI mockup with booking modal.
+  * **Treatments**: Table with checkmarks/alerts for vaccines.
+  * **Billing**: Sample invoices and payment history.
+  * **Client Portal**: Message threads and file list mockups.
+
+### 3. **Authentication**
+
+* Login and Register forms with:
+
+  * Role selector (Clinic, Salon, Boarding)
+  * Form validation messages (UI only, no JS validation logic)
+* CSS form transitions (e.g. focus styles)
+
+### 4. **Dashboard (After Login)**
+
+* Summary cards: Upcoming appointments, alerts, pet count.
+* Sidebar navigation with hover/focus styling.
+* Header with user dropdown.
+
+### 5. **Pet Profiles**
+
+* Card layout of pets: Name, species, age, icons for status.
+* Profile Detail Page: Tabs for Info, Treatments, Notes.
+* Editable form fields (non-functional, UI only)
+
+### 6. **Appointments**
+
+* Monthly calendar grid
+* Add/Edit appointment modal
+* Appointment list table with sort/filter (no functionality)
+
+### 7. **Treatments**
+
+* Timeline view or table of past treatments
+* Vaccination status with icons (e.g., ✅ ⚠️ ❌)
+
+### 8. **Billing**
+
+* Static table of invoices
+* Mock invoice preview (PDF-style layout)
+* Payment methods as static icons
+
+### 9. **Messages & Documents**
+
+* Message threads (2-pane layout)
+* File upload mock UI (drag-and-drop area with preview)
+* Message alerts styled with vanilla CSS animations (e.g., fade-in)
+
+---
+
+## 🧱 Tech Stack & Style Guidelines
+
+### Tech Stack
+
+* **React** (via Vite)
+* **Vanilla CSS**
+* **React Router** for navigation
+* **Static mock data** (hardcoded JSON or arrays)
+
+### CSS Organization
+
+* `/styles/` folder with individual `.css` files:
+
+  * `main.css` – Global styles, reset, typography
+  * `layout.css` – Grids, containers, flex utilities
+  * `components/` – Buttons, cards, forms, navbars
+  * `pages/` – Landing, Dashboard, etc.
+* Follow **BEM naming convention** for classes (`.btn--primary`, `.card__header`)
+* Use **CSS variables** for colors and spacing:
+
+  ```css
+  :root {
+    --primary-color: #1b8ef2;
+    --accent-color: #f2b01b;
+    --font-body: 'Segoe UI', sans-serif;
+    --border-radius: 8px;
+  }
+  ```
+* Responsive layout via media queries:
+
+  ```css
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  }
+  ```
+
+---
+
+## 📦 Deliverables
+
+* **Fully navigable UI mockup**
+* **Component structure** in React with reusable CSS classes
+* No back-end logic (mock UI behavior only)
+* Desktop and mobile responsive designs
+* Readme with setup instructions (`vite dev`), file structure, and contribution notes
+
+---
+
+## ✅ Success Criteria (for Mockup)
+
+* Full visual flow from public landing to post-login dashboard
+* All core features visually represented and styled using vanilla CSS
+* Responsive and accessible layout (ARIA labels, color contrast)
+* No third-party CSS libraries or frameworks
+* Clean, commented codebase ready for handoff to back-end or full-stack team
+
+---
+
+Would you like a starter file structure or sample CSS snippets to go with this?
