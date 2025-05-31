@@ -1,5 +1,16 @@
-import { Card, CardContent } from "@/components/ui/card";
+import Card from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
+import { ReactNode } from "react";
+
+interface CardContentProps {
+  children: ReactNode;
+  className?: string;
+}
+
+function CardContent({ children, className = '' }: CardContentProps) {
+  const classes = ['card__content', className].filter(Boolean).join(' ');
+  return <div className={classes}>{children}</div>;
+}
 
 export default function NotFound() {
   return (

@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "types": ["node", "vite/client"],
     "paths": {
+      "@/components/ui/card": ["./client/src/components/ui/card.tsx"],
       "@/*": ["./client/src/*"],
       "@shared/*": ["./shared/*"]
     }
